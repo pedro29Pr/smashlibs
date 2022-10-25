@@ -17,7 +17,7 @@ const IOS_DOCUMENTSFOLDER = "Documents";
 /// Application workspace utilities.
 class Workspace {
   static String APP_NAME =
-      "smash"; // change this if you are customizing the app
+      "SIGIZA"; // change this if you are customizing the app
   static String? _rootFolder;
 
   static bool _isDesktop = false;
