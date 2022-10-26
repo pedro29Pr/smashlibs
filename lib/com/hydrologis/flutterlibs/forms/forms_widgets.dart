@@ -213,13 +213,26 @@ class _MasterDetailPageState extends State<MasterDetailPage> {
     return WillPopScope(
       onWillPop: () async {
         // TODO check if something changed would be really good
-        await widget.formHelper.onSaveFunction(context);
+        //await widget.formHelper.onSaveFunction(context);
+        Navigator.pop(context, false);
         return true;
       },
       child: widget.doScaffold
           ? Scaffold(
               appBar: AppBar(
-                title: widget.formHelper.getFormTitleWidget(),
+                //title: widget.formHelper.getFormTitleWidget(),
+
+                title: Text(TagsManager.getFormNames4Section(
+                    widget.formHelper.getSectionMap())[0]),
+                actions: (<Widget>[
+                  IconButton(
+                      onPressed: () async {
+                        await widget.formHelper.onSaveFunction(context);
+                        Navigator.pop(context, true);
+                      },
+                      tooltip: "Save",
+                      icon: Icon(Icons.save, color: Colors.white)),
+                ]),
               ),
               body: bodyContainer,
             )
