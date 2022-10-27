@@ -230,7 +230,7 @@ class _MasterDetailPageState extends State<MasterDetailPage> {
                         await widget.formHelper.onSaveFunction(context);
                         Navigator.pop(context, true);
                       },
-                      tooltip: "Save",
+                      tooltip: "Guardar",
                       icon: Icon(Icons.save, color: Colors.white)),
                 ]),
               ),
@@ -1472,8 +1472,8 @@ class PicturesWidgetState extends State<PicturesWidget> with AfterLayoutMixin {
                                 ),
                                 SmashUI.normalText(
                                     widget.fromGallery
-                                        ? "Load image"
-                                        : "Take a picture",
+                                        ? "Cargar imagen"
+                                        : "Tomar una foto",
                                     color: SmashColors.mainDecorations,
                                     bold: true),
                               ],
